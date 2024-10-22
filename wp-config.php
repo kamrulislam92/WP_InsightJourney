@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'wpkamrul' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'admin' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'admin' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
