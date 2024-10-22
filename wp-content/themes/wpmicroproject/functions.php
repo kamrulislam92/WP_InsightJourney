@@ -20,3 +20,29 @@ function kamrul_css_js_calling_enque(){
     wp_enqueue_script('main', get_template_directory_uri().'js/main.js', array(), '1.0.0', 'true');
 }
 add_action('wp_enqueue_scripts', 'kamrul_css_js_calling_enque');
+
+
+// Theme Function code start 
+
+function kamrul_customizar_registar($wp_customize){
+    
+    $wp_customize->add_section('kamrul_header_area', array(
+        'title'       =>  __('Header Area', 'kamrulislam'),
+        'description' => 'If you interested to update header area you can do it here',
+    ));
+
+    $wp_customize->add_setting('kamrul_logo', array(
+
+        'default' =>  get_bloginfo('template_directory').'/img/logo.png',
+    ));
+
+    $wp_customize->add_control(new Wp_Customize_Image_Control($wp_customize, 'kamrul_logo', array(
+
+        'label' => 'Logo Upload',
+        'setting' => 'kamrul_logo',
+        'description' => 'If you interested to change or update your logo you can do it',
+        'section' => 'kamrul_header_area',
+
+    ) ));
+}
+add_action('customize_register', 'kamrul_customizar_registar');
