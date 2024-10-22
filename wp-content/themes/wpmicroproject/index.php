@@ -13,7 +13,20 @@
     <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        
+        <div class="header_area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-9">
+                      <h1> Content for the right side can go here </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     <?php wp_footer(); ?>
 </body>
 </html>
