@@ -21,11 +21,45 @@
                             <img src="<?php //echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="img-fluid">
                         </a> -->
                         <a href="#">
-                            <img src="<?php echo get_theme_mod('kamrul_logo'); ?>" alt="Logo" class="img-fluid">
-                        </a>
+    <img src="<?php echo esc_url( get_theme_mod('kamrul_logo') ); ?>" alt="Logo" class="img-fluid">
+</a>
+
                     </div>
                     <div class="col-md-9">
-                      <h1> Content for the right side can go here </h1>
+                      <ul id="nav">
+                          <li><a href="http://">Home</a></li>
+                          <li><a href="http://">About Us</a></li>
+                          <li><a href="http://">Media</a></li>
+                          <li><a href="http://">Download</a></li>
+                          <li><a href="http://">Project</a></li>
+                          <li><a href="http://">Service</a>
+                            <ul>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a>
+                                    <ul>
+                                        <li><a href="http://">Dropdown Menu</a></li>
+                                        <li><a href="http://">Dropdown Menu</a></li>
+                                        <li><a href="http://">Dropdown Menu</a></li>
+                                        <li><a href="http://">Dropdown Menu</a></li>
+                                        <li><a href="http://">Dropdown Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+                                <li><a href="http://">Dropdown Menu</a></li>
+
+                            </ul>
+                          </li>
+                          <li><a href="http://"></a></li>
+                          <li><a href="http://">Home</a></li>
+                          <li><a href="http://">Home</a></li>
+                          <li><a href="http://">Home</a></li>
+                          <li><a href="http://">Home</a></li>
+
+                      </ul>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,11 @@
 /* ===================================
   *  Common css
  =====================================*/
-
+body{
+    font-family: "Kaisei Decol", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 img{
     max-width: 100%;
 }
@@ -13,3 +17,53 @@ img{
 #header_area{
     padding: 15px;
 }
+
+/* =====================================
+    nav menu css start
+ ======================================*/
+ #header_area .col-md-9 ul{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+     margin: 10px 0 0;
+     padding: 0;
+     list-style: none;
+     text-align: right;
+ }
+ #header_area .col-md-9 ul li{
+     display: inline-block;
+     position:relative;
+ }
+ #header_area .col-md-9 ul li a{
+     color: #262626;
+     padding: 20px 10px;
+     display: block;
+     text-transform: uppercase;
+     text-decoration: none;
+ }
+ #header_area .col-md-9 ul li a:hover{
+    color: #fff;
+    background-color: #ea1a70;
+    border-radius: 5px;
+}
+ /* =====================================
+    dropdown sub menu menu css start
+ ======================================*/
+ #header_area .col-md-9 ul li ul{
+    color: #262626 none repeat scroll 0 0;
+    position: absolute;
+    left: -99999px;
+    top: 62px;
+    width: 200px;
+    margin: 0;
+    text-align: left;
+    
+ }
+ #header_area .col-md-9 ul li:hover ul{
+    left: 0;
+    
+ }
+ /* =====================================
+    nav menu css end
+ ======================================*/
