@@ -26,7 +26,7 @@
 
                     </div>
                     <div class="col-md-9">
-                      <ul id="nav">
+                      <!-- <ul id="nav">
                           <li><a href="http://">Home</a></li>
                           <li><a href="http://">About Us</a></li>
                           <li><a href="http://">Media</a></li>
@@ -59,7 +59,41 @@
                           <li><a href="http://">Home</a></li>
                           <li><a href="http://">Home</a></li>
 
-                      </ul>
+                      </ul> -->
+                      <div class="container py-5">
+  
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          
+            <li class="dropdown dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel Action 1</a>
+                <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu1">
+                  
+                    <li class="dropdown dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel Action 2</a>
+                        <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <!-- <li class="dropdown dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel 2</a>
+                <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu1">
+                    <li><a class="dropdown-item" href="#">2 Action</a></li>
+                    <li><a class="dropdown-item" href="#">2 Another action</a></li>
+                    <li><a class="dropdown-item" href="#">2 Something else here</a></li>
+                </ul>
+            </li> -->
+            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+        </ul>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -67,3 +101,12 @@
     <?php wp_footer(); ?>
 </body>
 </html>
+<script>
+    let dropdowns = document.querySelectorAll('.dropdown-toggle')
+dropdowns.forEach((dd)=>{
+    dd.addEventListener('click', function (e) {
+        var el = this.nextElementSibling
+        el.style.display = el.style.display==='block'?'none':'block'
+    })
+})
+</script>

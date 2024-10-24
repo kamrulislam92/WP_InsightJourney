@@ -22,6 +22,13 @@ function kamrul_css_js_calling_enque(){
 add_action('wp_enqueue_scripts', 'kamrul_css_js_calling_enque');
 
 
+// google fonts enqueue start 
+
+function kamrul_add_google_fonts(){
+    wp_enqueue_style('kamrul_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald:wght@200..700&display=swap',false);
+}
+add_action('wp_enqueue_scripts','kamrul_add_google_fonts');
+
 // Theme Function code start 
 
 function kamrul_customizar_registar($wp_customize){

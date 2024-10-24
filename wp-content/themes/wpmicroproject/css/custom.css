@@ -48,7 +48,7 @@ img{
     border-radius: 5px;
 }
  /* =====================================
-    dropdown sub menu menu css start
+    dropdown menu menu css start
  ======================================*/
  #header_area .col-md-9 ul li ul{
     color: #262626 none repeat scroll 0 0;
@@ -64,6 +64,45 @@ img{
     left: 0;
     
  }
+ #header_area .col-md-9 ul li ul li {
+    display: block;
+    margin-left: 5px;
+}
+ #header_area .col-md-9 ul li ul li a {
+    color: #fff;
+    padding: 8px 10px;
+    margin: 5px 0;
+}
+ #header_area .col-md-9 ul li ul li a:hover{
+   background: #ddd;
+   color: #262626;
+    
+ }
+ #header_area .col-md-9 ul li:hover  a{
+   background: #ea1a70;
+   color: #fff;    
+ }
+ /*======================================
+  sub dropdown menu css start
+ =======================================*/
+ #header_area .col-md-9 ul li ul ul{
+    position: absolute;
+    left: -99999px;
+    top: 0;     
+  }
+  #header_area .col-md-9 ul li:hover ul li ul{
+    left: -999999px;
+  }
+  #header_area .col-md-9 ul li:hover ul li ul{
+    left: -999999px;
+  }
+  #header_area .col-md-9 ul li ul li:hover ul{
+    left: 200px;
+  }
+  #header_area .col-md-9 ul li ul li:hover a{
+   background: #ea1a70;
+   color: #fff;
+  }
  /* =====================================
     nav menu css end
  ======================================*/
