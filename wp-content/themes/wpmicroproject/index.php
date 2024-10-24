@@ -4,7 +4,6 @@
 */
 ?>
 <!DOCTYPE html>
-<!-- language setting and no-js add korar karon holo purano kono js plagin load hote bada dibe jodi load hoy conflict korte pare -->
 <html lang="<?php language_attributes(); ?>" class="no-js">
     <head>
         <meta charset="<?php bloginfo("charset"); ?>">
@@ -17,83 +16,43 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-3">
-                        <!-- <a href="#">
-                            <img src="<?php //echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="img-fluid">
-                        </a> -->
                         <a href="#">
-    <img src="<?php echo esc_url( get_theme_mod('kamrul_logo') ); ?>" alt="Logo" class="img-fluid">
-</a>
-
+                            <img src="<?php echo esc_url( get_theme_mod('kamrul_logo') ); ?>" alt="Logo" class="img-fluid">
+                        </a>
                     </div>
                     <div class="col-md-9">
-                      <!-- <ul id="nav">
-                          <li><a href="http://">Home</a></li>
-                          <li><a href="http://">About Us</a></li>
-                          <li><a href="http://">Media</a></li>
-                          <li><a href="http://">Download</a></li>
-                          <li><a href="http://">Project</a></li>
-                          <li><a href="http://">Service</a>
+                       <nav id="primary_nav_wrap">
                             <ul>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a>
+                                <li class="current-menu-item"><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">Download</a></li>
+                                <li><a href="#">Project</a></li>
+                                <li><a href="#">Service</a>
                                     <ul>
-                                        <li><a href="http://">Dropdown Menu</a></li>
-                                        <li><a href="http://">Dropdown Menu</a></li>
-                                        <li><a href="http://">Dropdown Menu</a></li>
-                                        <li><a href="http://">Dropdown Menu</a></li>
-                                        <li><a href="http://">Dropdown Menu</a></li>
+                                    <li><a href="#">Sub Menu 1</a></li>
+                                    <li><a href="#">Sub Menu 2</a></li>
+                                    <li><a href="#">Sub Menu 3</a></li>
+                                    <li><a href="#">Sub Menu 4</a>
+                                        <ul>
+                                        <li><a href="#">Deep Menu 1</a>
+                                            <ul>
+                                            <li><a href="#">Sub Deep 1</a></li>
+                                            <li><a href="#">Sub Deep 2</a></li>
+                                            <li><a href="#">Sub Deep 3</a></li>
+                                                <li><a href="#">Sub Deep 4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Deep Menu 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Sub Menu 5</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-                                <li><a href="http://">Dropdown Menu</a></li>
-
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Contact Us</a></li>
                             </ul>
-                          </li>
-                          <li><a href="http://"></a></li>
-                          <li><a href="http://">Home</a></li>
-                          <li><a href="http://">Home</a></li>
-                          <li><a href="http://">Home</a></li>
-                          <li><a href="http://">Home</a></li>
-
-                      </ul> -->
-                      <div class="container py-5">
-  
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          
-            <li class="dropdown dropend">
-                <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel Action 1</a>
-                <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu1">
-                  
-                    <li class="dropdown dropend">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel Action 2</a>
-                        <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu2">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-            <!-- <li class="dropdown dropend">
-                <a class="dropdown-item dropdown-toggle" href="#" id="multilevelDropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multilevel 2</a>
-                <ul class="dropdown-menu" aria-labelledby="multilevelDropdownMenu1">
-                    <li><a class="dropdown-item" href="#">2 Action</a></li>
-                    <li><a class="dropdown-item" href="#">2 Another action</a></li>
-                    <li><a class="dropdown-item" href="#">2 Something else here</a></li>
-                </ul>
-            </li> -->
-            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-        </ul>
-    </div>
-</div>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -101,12 +60,3 @@
     <?php wp_footer(); ?>
 </body>
 </html>
-<script>
-    let dropdowns = document.querySelectorAll('.dropdown-toggle')
-dropdowns.forEach((dd)=>{
-    dd.addEventListener('click', function (e) {
-        var el = this.nextElementSibling
-        el.style.display = el.style.display==='block'?'none':'block'
-    })
-})
-</script>

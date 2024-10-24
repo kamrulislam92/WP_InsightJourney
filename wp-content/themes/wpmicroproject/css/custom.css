@@ -18,91 +18,99 @@ img{
     padding: 15px;
 }
 
-/* =====================================
-    nav menu css start
- ======================================*/
- #header_area .col-md-9 ul{
-    font-family: "Oswald", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-     margin: 10px 0 0;
-     padding: 0;
-     list-style: none;
-     text-align: right;
- }
- #header_area .col-md-9 ul li{
-     display: inline-block;
-     position:relative;
- }
- #header_area .col-md-9 ul li a{
-     color: #262626;
-     padding: 20px 10px;
-     display: block;
-     text-transform: uppercase;
-     text-decoration: none;
- }
- #header_area .col-md-9 ul li a:hover{
-    color: #fff;
-    background-color: #ea1a70;
-    border-radius: 5px;
+
+
+ #primary_nav_wrap
+{
+  /* margin-top:15px */
+  float: right;
 }
- /* =====================================
-    dropdown menu menu css start
- ======================================*/
- #header_area .col-md-9 ul li ul{
-    color: #262626 none repeat scroll 0 0;
-    position: absolute;
-    left: -99999px;
-    top: 62px;
-    width: 200px;
-    margin: 0;
-    text-align: left;
-    
- }
- #header_area .col-md-9 ul li:hover ul{
-    left: 0;
-    
- }
- #header_area .col-md-9 ul li ul li {
-    display: block;
-    margin-left: 5px;
+
+#primary_nav_wrap ul
+{
+  list-style:none;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0
 }
- #header_area .col-md-9 ul li ul li a {
-    color: #fff;
-    padding: 8px 10px;
-    margin: 5px 0;
+
+#primary_nav_wrap ul a
+{
+  display:block;
+  color:#333;
+  text-decoration:none;
+  font-weight:700;
+  font-size:12px;
+  line-height:32px;
+  padding:0 15px;
+  font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
 }
- #header_area .col-md-9 ul li ul li a:hover{
-   background: #ddd;
-   color: #262626;
-    
- }
- #header_area .col-md-9 ul li:hover  a{
-   background: #ea1a70;
-   color: #fff;    
- }
- /*======================================
-  sub dropdown menu css start
- =======================================*/
- #header_area .col-md-9 ul li ul ul{
-    position: absolute;
-    left: -99999px;
-    top: 0;     
-  }
-  #header_area .col-md-9 ul li:hover ul li ul{
-    left: -999999px;
-  }
-  #header_area .col-md-9 ul li:hover ul li ul{
-    left: -999999px;
-  }
-  #header_area .col-md-9 ul li ul li:hover ul{
-    left: 200px;
-  }
-  #header_area .col-md-9 ul li ul li:hover a{
-   background: #ea1a70;
-   color: #fff;
-  }
- /* =====================================
-    nav menu css end
- ======================================*/
+
+#primary_nav_wrap ul li
+{
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+  /* background:#ddd */
+  background:#ea1a70
+}
+
+#primary_nav_wrap ul li:hover
+{
+  background:#ea1a70
+}
+
+#primary_nav_wrap ul ul
+{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#000;
+  color: #fff;
+  padding:0
+}
+
+#primary_nav_wrap ul ul li:hover
+{
+
+  background:#ea1a70;
+
+}
+#primary_nav_wrap ul ul li:hover a
+{
+
+  color:#fff;
+
+}
+#primary_nav_wrap ul li:hover a{
+  color: #fff;
+}
+#primary_nav_wrap ul ul li
+{
+  float:none;
+  width:200px
+}
+
+#primary_nav_wrap ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+#primary_nav_wrap ul ul ul
+{
+  top:0;
+  left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+  display:block
+}
