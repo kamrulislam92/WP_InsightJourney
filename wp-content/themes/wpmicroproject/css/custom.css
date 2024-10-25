@@ -54,7 +54,10 @@ img{
   margin:0;
   padding:0
 }
-
+#primary_nav_wrap ul li a
+{
+ text-transform: uppercase;
+}
 #primary_nav_wrap ul li.current-menu-item
 {
   /* background:#ddd */
@@ -87,6 +90,7 @@ img{
 {
 
   color:#fff;
+
 
 }
 #primary_nav_wrap ul li:hover a{

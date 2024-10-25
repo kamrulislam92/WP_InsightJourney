@@ -53,3 +53,8 @@ function kamrul_customizar_registar($wp_customize){
     ) ));
 }
 add_action('customize_register', 'kamrul_customizar_registar');
+
+
+// Menu register code start 
+
+register_nav_menu('main_menu',__('Main Menu', 'kamrulislam'));

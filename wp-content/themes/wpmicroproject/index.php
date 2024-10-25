@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-9">
                        <nav id="primary_nav_wrap">
-                            <ul>
+                            <!-- <ul id="nav">
                                 <li class="current-menu-item"><a href="#">Home</a></li>
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Media</a></li>
@@ -51,7 +51,9 @@
                                 </li>
                                 <li><a href="#">Faq</a></li>
                                 <li><a href="#">Contact Us</a></li>
-                            </ul>
+                            </ul> -->
+
+                            <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id'=> 'primary_nav_wrap')); ?>
                         </nav>
                     </div>
                 </div>
