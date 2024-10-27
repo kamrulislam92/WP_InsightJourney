@@ -56,10 +56,10 @@ function kamrul_customizar_registar($wp_customize){
     // menu position setting code start 
     $wp_customize->add_section('kamrul_menu_position', array(
         'title' => __('Menu Position Option', 'kamrulislam'),
-        'description' => 'If you interested to change your menu position you can do it.',
+        'description' => 'If you interested to change your menu position you can do it.'
     ));
     $wp_customize->add_setting('kamrul_menu_position', array(
-        'default' => 'Right Menu'
+        'default' => 'right_menu',
     ));
     $wp_customize->add_control('kamrul_menu_position',array(
         'label' => "Menu Position",
@@ -70,9 +70,10 @@ function kamrul_customizar_registar($wp_customize){
         'choices'=> array(
             'left_menu' => "Left Menu ",
             'right_menu' => "Right Menu",
-            'center_menu' => "Center Menu",
+            'center_menu' => "Center Menu"
         ),
     ));
+    
 }
 add_action('customize_register', 'kamrul_customizar_registar');
 
@@ -80,3 +81,6 @@ add_action('customize_register', 'kamrul_customizar_registar');
 // Menu register code start 
 
 register_nav_menu('main_menu',__('Main Menu', 'kamrulislam'));
+
+ 
+
