@@ -54,25 +54,48 @@ function kamrul_customizar_registar($wp_customize){
 
 
     // menu position setting code start 
+    // $wp_customize->add_section('kamrul_menu_position', array(
+    //     'title' => __('Menu Position Option', 'kamrulislam'),
+    //     'description' => 'If you interested to change your menu position you can do it.'
+    // ));
+    // $wp_customize->add_setting('kamrul_menu_position', array(
+    //     'default' => 'right_menu',
+    // ));
+    // $wp_customize->add_control('kamrul_menu_position',array(
+    //     'label' => "Menu Position",
+    //     'description' => 'Select Your Menu Position',
+    //     'setting' => 'kamrul_menu_position',
+    //     'section' => 'kamrul_menu_position',
+    //     'type' => 'radio',
+    //     'choices'=> array(
+    //         'left_menu' => 'Left Menu' ,
+    //         'right_menu' => 'Right Menu',
+    //         'center_menu' => 'Center Menu'
+    //     ),
+    // ));
     $wp_customize->add_section('kamrul_menu_position', array(
-        'title' => __('Menu Position Option', 'kamrulislam'),
-        'description' => 'If you interested to change your menu position you can do it.'
+        'title'       => __('Menu Position Option', 'kamrulislam'),
+        'description' => 'If you are interested in changing your menu position, you can do it here.'
     ));
+    
     $wp_customize->add_setting('kamrul_menu_position', array(
         'default' => 'right_menu',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control('kamrul_menu_position',array(
-        'label' => "Menu Position",
+    
+    $wp_customize->add_control('kamrul_menu_position', array(
+        'label'       => "Menu Position",
         'description' => 'Select Your Menu Position',
-        'setting' => 'kamrul_menu_position',
-        'section' => 'kamrul_menu_position',
-        'type' => 'radio',
-        'choices'=> array(
-            'left_menu' => "Left Menu ",
-            'right_menu' => "Right Menu",
-            'center_menu' => "Center Menu"
+        'section'     => 'kamrul_menu_position',
+        'settings'    => 'kamrul_menu_position',
+        'type'        => 'radio',
+        'choices'     => array(
+            'left_menu'   => 'Left Menu',
+            'right_menu'  => 'Right Menu',
+            'center_menu' => 'Center Menu'
         ),
     ));
+    
     
 }
 add_action('customize_register', 'kamrul_customizar_registar');

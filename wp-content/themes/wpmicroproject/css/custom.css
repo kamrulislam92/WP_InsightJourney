@@ -7,8 +7,13 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+.logo_img{
+  height: 120px;
+  width: 100%;
+}
 img{
     max-width: 100%;
+    max-height: 100%;
 }
 
 /* =====================================
@@ -25,7 +30,7 @@ img{
   margin: 10px 0 0;
   padding: 0;
   list-style: none;
-  text-align: center;
+  /* text-align: center; */
 }
 #header_area .col-md-9 ul li{
   display: inline-block;
@@ -126,29 +131,23 @@ Menu Position option css
  } */
 
 
-/* Adjust ordering of .col-md-3 and .col-md-9 in .left_menu */
-#header_area .left_menu .container .row .col-md-3 {
+/* Left Menu */
+#header_area.left_menu .col-md-3 {
   order: 2 !important;
 }
-
-#header_area .left_menu .container .row .col-md-9 {
+#header_area.left_menu .col-md-9 {
   order: 1 !important;
- 
-}
-#header_area .left_menu .col-md-9{
   text-align: left !important;
 }
 
-#header_area .center_menu .col-md-3{
+/* Center Menu */
+#header_area.center_menu .col-md-3 {
   width: 100% !important;
   text-align: center !important;
   margin-bottom: 10px !important;
 }
-
-#header_area .center_menu .col-md-9 {
+#header_area.center_menu .col-md-9 {
   width: 100% !important;
-}
-#header_area .center_menu .col-md-9 {
   text-align: center !important;
 }
 

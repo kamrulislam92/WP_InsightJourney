@@ -12,20 +12,44 @@
     <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div id="header_area" class="<?php echo get_theme_mod('kamrul_menu_position'); ?>">
+        <!-- <div id="header_area" class="<?php //echo get_theme_mod('kamrul_menu_position'); ?>">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <a href="#">
-                            <img src="<?php echo esc_url( get_theme_mod('kamrul_logo') ); ?>" alt="Logo" class="img-fluid">
+                            <img src="<?php //echo esc_url( get_theme_mod('kamrul_logo') ); ?>" alt="Logo" class="img-fluid">
                         </a>
                     </div>
                     <div class="col-md-9">
-                        <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id'=> 'nav')); ?>
+                        <?php// wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id'=> 'nav')); ?>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <header id="header_area" class="<?php echo esc_attr(get_theme_mod('kamrul_menu_position', 'right_menu')); ?>">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <img src="<?php echo esc_url(get_theme_mod('kamrul_logo')); ?>" alt="Logo" class="logo_img">
+                        </a>
+                    </div>
+                    <div class="col-md-9">
+                        <?php wp_nav_menu(array('theme_location' => 'main_menu', 'menu_id' => 'nav')); ?>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="body_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <?php wp_footer(); ?>
 </body>
 </html>
