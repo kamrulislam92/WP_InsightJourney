@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#">
+                        <a href="<?php echo home_url(); ?>">
                             <img src="<?php echo esc_url(get_theme_mod('kamrul_logo')); ?>" alt="Logo" class="logo_img">
                         </a>
                     </div>
