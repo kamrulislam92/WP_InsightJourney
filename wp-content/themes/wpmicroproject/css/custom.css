@@ -51,6 +51,7 @@ img{
   font-family: "Kaisei Decol", serif;
   display: block;
   font-size: 10px;
+  text-align: center;
 }
 #header_area .col-md-9 .menu-all-pages-container #nav li:hover a span{
   color: rgb(0, 255, 200);
