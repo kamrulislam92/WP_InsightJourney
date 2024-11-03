@@ -105,5 +105,51 @@ add_action('customize_register', 'kamrul_customizar_registar');
 
 register_nav_menu('main_menu',__('Main Menu', 'kamrulislam'));
 
+// walker Menu Properties
+
+// function kamrul_nav_description( $item_output, $item, $args ){
+//     if( ! empty($item->description)){
+//         $item_output = str_replace($args->link_after . '</a>', '<span class="walker_nav"' . $item->description . '</span>' . $args->link_after . '</a>', $item_output);
+//     }
+//     return $item_output;
+// }
+// add_filter('walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3);
+function kamrul_nav_description( $item_output, $item, $args ) {
+    // Ensure $args is an object and has a property link_after
+    if ( is_object( $args ) && property_exists( $args, 'link_after' ) ) {
+        $link_after = $args->link_after;
+    } else {
+        // Set a default empty string for link_after if it's not available
+        $link_after = '';
+    }
+
+    if ( ! empty( $item->description ) ) {
+        $item_output = str_replace(
+            $link_after . '</a>', 
+            '<span class="walker_nav">' . $item->description . '</span>' . $link_after . '</a>', 
+            $item_output
+        );
+    }
+
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3 );
+
+
+// function kamrul_nav_description( $item_output, $item, $args ) {
+//     if ( ! empty( $item->description ) ) {
+//         $item_output = str_replace(
+//             $args->link_after . '</a>', 
+//             '<span class="walker_nav">' . $item->description . '</span>' . $args->link_after . '</a>', 
+//             $item_output
+//         );
+//     }
+//     return $item_output;
+// }
+// add_filter( 'walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3 );
+
+
+
+
  
 

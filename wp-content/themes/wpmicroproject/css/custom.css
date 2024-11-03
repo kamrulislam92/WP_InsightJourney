@@ -30,16 +30,39 @@ img{
   margin: 10px 0 0;
   padding: 0;
   list-style: none;
-  /* text-align: center; */
+  /* text-align: right; */
+}
+.right_menu .container .row .col-md-9 ul{
+  text-align: right ;
+}
+.left_menu .container .row .col-md-9 ul{
+  text-align: left ;
+}
+.center_menu .container .row .col-md-9 ul{
+  text-align: center ;
 }
 #header_area .col-md-9 ul li{
   display: inline-block;
   position: relative;
 }
+
+/* walker menu css start  */
+#header_area .col-md-9 .menu-all-pages-container #nav li a span{
+  font-family: "Kaisei Decol", serif;
+  display: block;
+  font-size: 10px;
+}
+#header_area .col-md-9 .menu-all-pages-container #nav li:hover a span{
+  color: rgb(0, 255, 200);
+}
+/* walker menu css end  */
+
 #header_area .col-md-9 ul li a{
+  font-family: "Kaisei Decol", serif;
    color: #262626;
    padding: 20px 10px;
    display: block;
+   font-size: 16px;
    text-transform: uppercase;
    text-decoration: none;
 }
@@ -57,6 +80,7 @@ img{
   text-align: left;
   top: 62px;
   width: 200px;
+  z-index: 9999;
 }
 #header_area .col-md-9 ul li:hover ul{
   left: 0;
@@ -150,7 +174,10 @@ Menu Position option css
   width: 100% !important;
   text-align: center !important;
 }
-
+#header_area.center_menu .col-md-9 ul ul{
+  /* width: 100% ; */
+  text-align: left ;
+}
 
  
 
