@@ -54,25 +54,6 @@ function kamrul_customizar_registar($wp_customize){
 
 
     // menu position setting code start 
-    // $wp_customize->add_section('kamrul_menu_position', array(
-    //     'title' => __('Menu Position Option', 'kamrulislam'),
-    //     'description' => 'If you interested to change your menu position you can do it.'
-    // ));
-    // $wp_customize->add_setting('kamrul_menu_position', array(
-    //     'default' => 'right_menu',
-    // ));
-    // $wp_customize->add_control('kamrul_menu_position',array(
-    //     'label' => "Menu Position",
-    //     'description' => 'Select Your Menu Position',
-    //     'setting' => 'kamrul_menu_position',
-    //     'section' => 'kamrul_menu_position',
-    //     'type' => 'radio',
-    //     'choices'=> array(
-    //         'left_menu' => 'Left Menu' ,
-    //         'right_menu' => 'Right Menu',
-    //         'center_menu' => 'Center Menu'
-    //     ),
-    // ));
     $wp_customize->add_section('kamrul_menu_position', array(
         'title'       => __('Menu Position Option', 'kamrulislam'),
         'description' => 'If you are interested in changing your menu position, you can do it here.'
@@ -96,6 +77,38 @@ function kamrul_customizar_registar($wp_customize){
         ),
     ));
     
+        // Footer position setting code start 
+        // $wp_customize->add_section('kamrul_footer_option', array(
+        //     'title'       => __('Footer Option', 'kamrulislam'),
+        //     'description' => 'If you are interested in changing your footer option, you can do it here.'
+        // ));
+        
+        // $wp_customize->add_setting('kamrul_copyright_section', array(
+        //     'default' => '&copy copyright 2024 | by kamrul',
+        // ));
+        
+        // $wp_customize->add_control('kamrul_copyright_section', array(
+        //     'label'       => "Copyright Text",
+        //     'description' => 'If you need can update your copyright text from here',
+        //     'section'     => 'kamrul_footer_option',
+        //     'setting'    => 'kamrul_copyright_section', 
+        // ));
+        $wp_customize->add_section('kamrul_footer_option', array(
+            'title'       => __('Footer Option', 'kamrulislam'),
+            'description' => 'If you are interested in changing your footer option, you can do it here.'
+        ));
+        
+        $wp_customize->add_setting('kamrul_copyright_section', array(
+            'default' => '&copy; copyright 2024 | by kamrul',
+        ));
+        
+        $wp_customize->add_control('kamrul_copyright_section', array(
+            'label'       => 'Copyright Text',
+            'description' => 'If you need, you can update your copyright text from here.',
+            'section'     => 'kamrul_footer_option',
+            'settings'    => 'kamrul_copyright_section', // corrected to 'settings'
+        ));
+        
     
 }
 add_action('customize_register', 'kamrul_customizar_registar');
@@ -114,6 +127,7 @@ register_nav_menu('main_menu',__('Main Menu', 'kamrulislam'));
 //     return $item_output;
 // }
 // add_filter('walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3);
+
 function kamrul_nav_description( $item_output, $item, $args ) {
     // Ensure $args is an object and has a property link_after
     if ( is_object( $args ) && property_exists( $args, 'link_after' ) ) {
@@ -136,17 +150,6 @@ function kamrul_nav_description( $item_output, $item, $args ) {
 add_filter( 'walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3 );
 
 
-// function kamrul_nav_description( $item_output, $item, $args ) {
-//     if ( ! empty( $item->description ) ) {
-//         $item_output = str_replace(
-//             $args->link_after . '</a>', 
-//             '<span class="walker_nav">' . $item->description . '</span>' . $args->link_after . '</a>', 
-//             $item_output
-//         );
-//     }
-//     return $item_output;
-// }
-// add_filter( 'walker_nav_menu_start_el', 'kamrul_nav_description', 10, 3 );
 
 
 
